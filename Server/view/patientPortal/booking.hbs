@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Stage</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body class="container">
+         <div class="table-responsive my-5">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody class="text-right" id="updatePatientsDataPagenation">
+              {{#each appointments}}
+            <tr>
+                <td>{{this.date}}</td>    
+ 
+            </tr>
+              {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+    <h3 class="my-5">Your meeting is only half an hour not more</h3>
+<form action="" method="POST">
+            <input type="datetime-local" name="dateTime">
+            <input  type="submit" class="btn btn-success mx-3">
+</form>
+</body>
+</html>

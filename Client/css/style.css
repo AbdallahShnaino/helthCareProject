@@ -1,0 +1,28 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navigation{
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+.regInput{
+    color: black;
+    width: 90%;
+}
+.regbtn{
+    width: 50%;
+    margin: 2% auto;
+}
+
+.mylink{
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    margin: auto;
+}
+.infoBoxUserData{
+    background-color: red;
+}
+  
+
+

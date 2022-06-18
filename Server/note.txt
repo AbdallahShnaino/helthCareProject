@@ -1,0 +1,27 @@
+    db.collection('Patient').updateOne(
+            {emailAddress:patient.emailAddress},
+            {$set: 
+                {
+                    emailAddress:patient.emailAddress,
+                    firstName: patient.firstName,
+                    fatherName: patient.fatherName,
+                    familyName: patient.familyName,
+                    phoneNumber: patient.phoneNumber,
+                    dateOfBirth: patient.dateOfBirth,
+                    postion:patient.postion,
+                    nationalNumber: patient.nationalNumber,
+                    isActive:false,
+                    timeOfRegistration:patient.timeOfRegistration,
+                }
+            } ,{upsert:true}, (error , result)=>{
+             if(error){
+                throw new Error("something go woring throw register you to the system , sorry try again")
+             }
+             console.log("result -> "+result.acknowledged) 
+
+      // https://health-care-system-348623.df.r.appspot.com/login
+      
+      luck in avoidance 
+      in our system wh avoid to choose all services in only one provider, we use ASW for storage and google app engine for deploy our system 
+      Userd SaaS
+      we use gmail service and google auth service 

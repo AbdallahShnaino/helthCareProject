@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Doctor</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+</head>
+<body class="container">
+          <h2 class="addPaddingToView" id="viewPatientsData">List of Doctors</h2>
+       <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Identity</th>
+              <th scope="col">Email Address</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Family Name</th>
+              <th scope="col">Patients</th>
+              <th scope="col">Add</th>
+            </tr>
+          </thead>
+          <tbody class="text-right" id="updatePatientsDataPagenation">
+              {{#each patientsData.results}}
+            <tr>
+                <td>{{this.identity}}</td>
+              <td>{{this.emailAddress}}</td>
+              <td>{{this.firstName}}</td>
+              <td>{{this.familyName}}</td>
+              <td>
+                              <ul >
+                  {{#each this.doctores}}
+                       <li style="list-style-type: none;">{{this}}</li>
+                    {{/each}}   
+              </ul>
+              </td>
+         
+                      <td>
+
+                    <p class="text-danger"><a href="?addDoctorWith={{this.identity}}">Add This Doctor</a></p>
+             
+               </td>
+            </tr>
+              {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+      <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {{#if patientsData.previous}}
+    <li class="page-item"><a class="page-link" href="?page={{patientsData.previous.page}}&limit=5">Previous</a></li>
+    {{/if}}
+    {{#each patientsData.pages}}
+        <li class="page-item"><a class="page-link" href="?page={{{this}}}&limit=5">{{{this}}}</a></li>
+    {{/each}}
+     {{#if patientsData.next}}
+    <li class="page-item"><a class="page-link" href="?page={{patientsData.next.page}}&limit=5">Next</a></li>
+    {{/if}}
+  </ul>
+</nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>

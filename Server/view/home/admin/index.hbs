@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .infoBoxUserData{
+        background-color: aliceblue;
+        padding: 1.5rem;
+      }
+      .titlesA{
+        padding-left: 1.2rem;
+        line-height: 6px;
+        padding-top: 5px;
+      }
+      .addPaddingToView{
+        padding-top: 100px;
+      }
+      .pa_back{
+        text-decoration: none;
+        background-color: #242333;
+        color: white;
+        padding: 1.5rem;
+                text-align: center;
+      margin: 1rem;
+      }
+       .pa_back:hover{
+        background-color: #3f3d5a;
+        color: white;
+        padding: 1.5rem;
+        cursor: pointer;
+      }
+
+            .do_back{
+        background-color: #01B0D3;
+        color: white;
+        padding: 1.5rem;
+                text-align: center;
+      margin: 1rem;
+      }
+       .do_back:hover{
+        background-color: #0196b4;
+        color: white;
+        padding: 1.5rem;
+        cursor: pointer;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Health Care System</a>
+
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="/auth/logout">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+
+
+    <main >
+      <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+   
+      </div>
+
+
+
+
+<div class="container">
+        <h1 class="h2">Dashboard</h1>
+  <div >
+  <div class=" infoBoxUserData row">
+    <div class="col-2">
+  <img src="../../../image/regPageImg.jpg" height="160" width="160" alt="Personal image">
+    </div>
+    <div class="col-10 text-left">
+      <p class="titlesA font-weight-bold">Admin name :<span class="text-muted">{{firstName}} {{familyName}}</span></p>
+      <p class="titlesA font-weight-bold">Admin emailAddress :<span class="text-muted">{{emailAddress}}</span></p>
+      <p class="titlesA font-weight-bold">Date of Creation:<span class="text-muted">{{createdAt}}</span></p>
+      <p class="titlesA font-weight-bold">Last Update :<span class="text-muted">{{updatedAt}}</span></p>
+      <a class="titlesA"  href="#">Edit Personal Information</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="row">
+   <div class="col-sm">
+      <a style="text-decoration: none;"  href="admin/viewDoctorData">
+      <div class="do_back">Show Doctors</div>
+      </a>
+    </div>
+
+       <div class="col-sm">
+      <a style="text-decoration: none;"  href="admin/updateDoctorData">
+      <div class="do_back">Update Doctors</div>
+      </a>
+    </div>
+
+    <div class="col-sm">
+      <a style="text-decoration: none;"  href="/admin/doctor/req/view">
+      <div class="do_back">Doctors Requests</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a style="text-decoration: none;"  href="admin/viewPatientData">
+      <div class="pa_back">Show Patients</div>
+      </a>
+    </div>
+       <div class="col-sm">
+      <a style="text-decoration: none;"  href="admin/updatePatientData">
+      <div class="pa_back">Update Patients</div>
+      </a>
+    </div>
+       <div class="col-sm">
+      <a style="text-decoration: none;"  href="/admin/patient/req/view">
+      <div class="pa_back">Patients Requests</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+  </body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+   
+
+  <script src="../../../js/home.js"></script>
+
+</html>
+

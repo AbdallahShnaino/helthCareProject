@@ -1,0 +1,111 @@
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Doctor</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+
+
+     <div class="container mt-5">
+         <div class="m-3 h3">Update Doctor Page</div>
+<form action="/admin/update/doctor/" method="get">
+<div class="input-group m-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" >Old Identity</span>
+  </div>
+  <input type="hidden" name="id" id="id_a" , value="{{{doctor.identity}}}">
+  <input type="text" class="form-control" style="pointer-events: none;" value="{{{doctor.identity}}}">
+  <input type="text" name="newIdentity" placeholder="New Identity" class="form-control">
+</div>
+<!-- Email Address -->
+<div class="input-group m-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" >Old Email Address</span>
+  </div>
+  <input type="text" class="form-control" style="pointer-events: none;" value="{{doctor.emailAddress}}">
+  <input type="text" name="newEmailAddress" placeholder="New Email Address" class="form-control" >
+</div>
+<!-- First Name -->
+<div class="input-group m-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">Old First Name</span>
+  </div>
+  <input type="text" class="form-control" style="pointer-events: none;" value="{{doctor.firstName}}">
+  <input type="text" name="newFirtName" placeholder="New First Name" class="form-control" >
+</div>
+<!-- First Name -->
+<div class="input-group m-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="">Old Family Name</span>
+  </div>
+  <input type="text" class="form-control" style="pointer-events: none;" value="{{doctor.familyName}}">
+  <input type="text" name="newFamilyName" placeholder="New Family Name" class="form-control" >
+</div>
+
+
+<!-- file to update -->
+<div >
+  <p>Patients</p>
+           {{#each doctor.patients}}
+              <h6 style="margin: 10px 50px;" value="{{this.identity}}">{{this.name}}</h6>
+           {{/each}}   
+
+</div>
+
+<div >
+  <p>Add New Patients</p>
+<select name="addList" multiple class="form-select w-100 m-3" aria-label="Default select example">
+           {{#each patients}}
+              <option value="{{this.identity}}">{{this.firstName}} {{this.familyName}}</option>
+           {{/each}}   
+</select>
+</div>
+
+<!-- file to update -->
+<div >
+  <p>Delete Patients</p>
+<select name="deleteList" multiple class="form-select w-100 m-3" aria-label="Default select example">
+           {{#each doctor.patients}}
+              <option value="{{this.identity}}">{{this.name}}</option>
+           {{/each}}   
+</select>
+</div>
+
+
+<div >
+<select name="isActive" class="form-select w-100 m-3" aria-label="Default select example">
+  <option selected>select Status</option>
+  <option value="1">Active</option>
+  <option value="0">Not Active</option>
+</select>
+</div>
+
+<input type="submit">
+</form>
+
+
+ </div>
+
+  </body>
+</html>
